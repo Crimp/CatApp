@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 //2) Give the cat a name. Use the CatShelterImpl service to assign a name
 
 IServiceCollection services = new ServiceCollection();
-services.AddCatCoreServices();
+services.AddCatServices();
 
 using(var scope = services.BuildServiceProvider().CreateScope()) {
     Console.WriteLine(scope.ServiceProvider.GetRequiredService<ICatFactory>().CreateCat());
