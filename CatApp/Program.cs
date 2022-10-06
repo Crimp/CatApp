@@ -2,12 +2,15 @@
 
 using CatApp;
 using CatCore;
+using CatShelter;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 IServiceCollection services = new ServiceCollection();
 services.AddCatCoreServices();
-//services.AddCatShelterServices();
+services.AddCatShelterServices();
+
+services.AddScoped<CatCustomizer>();
 
 var s = services.BuildServiceProvider();
 using(var scope = s.CreateScope()) {

@@ -1,7 +1,7 @@
 ﻿using CatCore;
 
 namespace CatShelter;
-public class CatShelterImpl {
+internal sealed class CatShelterImpl {
     public void UpdateCat(Cat c) {
         c.Name = "Boris";
     }
